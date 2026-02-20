@@ -19,7 +19,7 @@ val BurgundyRed = Color(0xFF800020)
 val RichMerlot = Color(0xFF5D0016)
 val BurgundyBackgroundLight = Color(0xFFFFFBFA) // Warm white
 val BurgundySurfaceLight = Color(0xFFFFFFFF)
-val BurgundySecondaryLight = Color(0xFFF8EBDT) // Champagne/Gold tint for secondary
+val BurgundySecondaryLight = Color(0xFFF8EBD7) // Champagne/Gold tint for secondary
 
 val BurgundyBackgroundDark = Color(0xFF120205) // Deepest Merlot/Black
 val BurgundySurfaceDark = Color(0xFF200509)

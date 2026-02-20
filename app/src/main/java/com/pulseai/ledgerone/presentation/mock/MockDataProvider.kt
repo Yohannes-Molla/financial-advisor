@@ -60,6 +60,20 @@ object MockDataProvider {
         PlannerItem("New Laptop", 25000.0, 18000.0, "Oct 2026", "Tech upgrade"),
         PlannerItem("Annual Insurance", 12000.0, 12000.0, "Mar 2026", "Fully funded")
     )
+
+    fun getVerificationHistory(): List<VerificationHistoryItem> = listOf(
+        VerificationHistoryItem("1", 2500.0, "Feb 18, 2026", true),
+        VerificationHistoryItem("2", 450.0, "Feb 17, 2026", false),
+        VerificationHistoryItem("3", 1200.0, "Feb 15, 2026", true)
+    )
+
+    fun getLatestVerificationResult(): VerificationResult = VerificationResult(
+        amount = 1250.0,
+        sender = "Abebe Kebede",
+        receiver = "Yohannes Molla",
+        date = "Feb 19, 2026",
+        isVerified = true
+    )
 }
 
 data class PlannerItem(

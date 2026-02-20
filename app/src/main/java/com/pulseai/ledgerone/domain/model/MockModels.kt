@@ -18,3 +18,18 @@ data class CategorySpend(
     val percentage: Float,
     val color: Long // Hex color for the pie chart
 )
+
+data class VerificationResult(
+    val amount: Double,
+    val sender: String,
+    val receiver: String,
+    val date: String,
+    val isVerified: Boolean
+)
+
+data class VerificationHistoryItem(
+    val id: String,
+    val amount: Double,
+    val date: String,
+    val isVerified: Boolean
+)

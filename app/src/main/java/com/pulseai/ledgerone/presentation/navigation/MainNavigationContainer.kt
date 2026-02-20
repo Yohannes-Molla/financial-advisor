@@ -17,10 +17,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.painterResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.pulseai.ledgerone.R
 import com.pulseai.ledgerone.presentation.pages.*
 import kotlinx.coroutines.launch
 
@@ -71,14 +73,23 @@ fun MainNavigationContainer() {
             topBar = {
                 CenterAlignedTopAppBar(
                     title = {
-                        Text(
-                            text = "LedgerOne",
-                            style = MaterialTheme.typography.titleLarge.copy(
-                                fontWeight = FontWeight.Light,
-                                letterSpacing = 2.sp
-                            ),
-                            color = MaterialTheme.colorScheme.primary
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_logo),
+                                contentDescription = null,
+                                tint = Color.Unspecified,
+                                modifier = Modifier.size(24.dp)
+                            )
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Text(
+                                text = "LedgerOne",
+                                style = MaterialTheme.typography.titleLarge.copy(
+                                    fontWeight = FontWeight.Light,
+                                    letterSpacing = 2.sp
+                                ),
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
                     },
                     navigationIcon = {
                         IconButton(onClick = { scope.launch { drawerState.open() } }) {
@@ -138,6 +149,7 @@ fun MainNavigationContainer() {
                 ) {
                     composable(LedgerOneDestinations.DASHBOARD_ROUTE) { DashboardPage() }
                     composable(LedgerOneDestinations.PLANNER_ROUTE) { PlannerPage() }
+                    composable(LedgerOneDestinations.VERIFY_ROUTE) { VerifyPage() }
                     composable(LedgerOneDestinations.SETTINGS_ROUTE) { SettingsPage() }
                     composable(LedgerOneDestinations.PROFILE_ROUTE) { ProfilePage() }
                     composable(LedgerOneDestinations.LINKED_BANKS_ROUTE) { LinkedBanksPage() }
@@ -169,14 +181,14 @@ fun NavigationDrawerHeader() {
             modifier = Modifier
                 .size(72.dp)
                 .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.primary),
+                .background(MaterialTheme.colorScheme.surface),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "YM",
-                style = MaterialTheme.typography.headlineSmall,
-                color = MaterialTheme.colorScheme.onPrimary,
-                fontWeight = FontWeight.Bold
+            Icon(
+                painter = painterResource(id = R.drawable.ic_logo),
+                contentDescription = null,
+                tint = Color.Unspecified,
+                modifier = Modifier.size(48.dp)
             )
         }
         Spacer(modifier = Modifier.height(16.dp))

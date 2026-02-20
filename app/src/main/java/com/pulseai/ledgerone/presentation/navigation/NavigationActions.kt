@@ -12,6 +12,7 @@ object LedgerOneDestinations {
     const val PLANNER_ROUTE = "planner"
     const val BUDGET_ROUTE = "budget"
     const val PROFILE_ROUTE = "profile"
+    const val VERIFY_ROUTE = "verify"
     const val SETTINGS_ROUTE = "settings"
     const val SECURITY_ROUTE = "security"
     const val LINKED_BANKS_ROUTE = "linked_banks"
@@ -24,9 +25,9 @@ data class NavigationItem(
 )
 
 val BottomNavItems = listOf(
-    NavigationItem(LedgerOneDestinations.DASHBOARD_ROUTE, Icons.Outlined.Home, "Home"),
-    NavigationItem(LedgerOneDestinations.PLANNER_ROUTE, Icons.Outlined.EventNote, "Planner"),
-    NavigationItem(LedgerOneDestinations.SETTINGS_ROUTE, Icons.Outlined.Settings, "Settings")
+    NavigationItem(LedgerOneDestinations.DASHBOARD_ROUTE, Icons.Outlined.Home, "Money"),
+    NavigationItem(LedgerOneDestinations.PLANNER_ROUTE, Icons.Outlined.EventNote, "Plan"),
+    NavigationItem(LedgerOneDestinations.VERIFY_ROUTE, Icons.Outlined.Verified, "Verify")
 )
 
 val DrawerNavItems = listOf(

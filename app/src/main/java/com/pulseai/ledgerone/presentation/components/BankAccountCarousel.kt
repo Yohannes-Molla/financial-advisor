@@ -38,18 +38,18 @@ fun BankAccountCarousel(
 
     HorizontalMultiBrowseCarousel(
         state = carouselState,
-        preferredItemWidth = 320.dp,
-        itemSpacing = 12.dp,
+        preferredItemWidth = 280.dp,
+        itemSpacing = 16.dp,
         modifier = modifier
             .fillMaxWidth()
-            .height(300.dp),
+            .height(260.dp),
         contentPadding = PaddingValues(horizontal = 16.dp)
     ) { index ->
         val account = accounts[index]
         ElevatedCard(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(300.dp)
+                .height(260.dp)
                 .padding(horizontal = 4.dp),
             colors = CardDefaults.elevatedCardColors(
                 containerColor = MaterialTheme.colorScheme.surface
